@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+body {
+  margin: 0;
+  background: hsl(30, 38%, 92%);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 530px;
+  height: 400px;
+  background: #ffffff;
+  display: flex;
+  border-radius: 10px;
+}
+
+.container .info-container,
+.container .img-container {
+  width: 50%;
+}
+
+.container .img-container {
+  border-radius: 10px 0px 0px 10px;
+  background: url("./images/image-product-desktop.jpg");
+  background-size: cover;
+}
+
+.container .info-container {
+  box-sizing: border-box;
+  padding: 5px 20px;
+}
+
+h4,
+p {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+p {
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 20px;
+}
+
+h2,
+span,
+del {
+  font-family: "Fraunces", serif;
+}
+
+h2 {
+    width: 80%;
+}
+
+.container .info-container .price-container {
+  display: flex;
+  align-items: center;
+}
+span {
+  font-size: 24px;
+  color: hsl(158, 36%, 37%);
+}
+
+del {
+  font-size: 12px;
+  margin-left: 30px;
+  color: hsl(228, 12%, 48%);
+}
+
+.button-container {
+  margin: 20px 0px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  width: 95%;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(158, 36%, 37%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button img {
+  margin-right: 10px;
+}
+
+button :hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 600px;
+  }
+  .container .info-container,
+  .container .img-container {
+    width: 100%;
+  }
+  .container .img-container {
+    height: 40%;
+    background: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .container .info-container h2 {
+    width: 80%;
+  }
+  .container .price-container {
+    margin-top: 30px;
+  }
+}
